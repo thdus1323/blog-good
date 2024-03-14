@@ -20,7 +20,6 @@ public class UserRepository {
         query.executeUpdate();
     }
 
-
     public User findByUsernameAndPassword(UserRequest.LoginDTO reqDTO){
         Query query =
                 em.createQuery("select u from User u where u.username = :username and u.password = :password", User.class);
