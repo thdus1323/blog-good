@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Controller
 public class BoardController {
 
-    @GetMapping("/" )
+    @GetMapping("/")
     public String index() {
         return "index";
     }
@@ -21,4 +21,5 @@ public class BoardController {
     public String detail(@PathVariable Integer id) {
         return "board/detail";
     }
+
 }
