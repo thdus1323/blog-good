@@ -15,7 +15,8 @@ public class UserController {
     public String join(UserRequest.JoinDTO requestDTO) {
         System.out.println(requestDTO);
 
-        userRepository.save(requestDTO);
+        userRepository.save(requestDTO.toEntity());
+
         return "redirect:/login-form";
     }
 
